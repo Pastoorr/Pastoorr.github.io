@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Práctica Bootstrap - Reto Final</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mi Sitio Web</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cards">Tarjetas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner rounded">
+        <div class="carousel-item active">
+          <div class="p-5 bg-secondary text-white text-center">
+            <h1>Bienvenido al Reto Final</h1>
+            <p>Práctica de componentes Bootstrap</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="p-5 bg-dark text-white text-center">
+            <h1>Explora los componentes</h1>
+            <p>Cards, Modales y Formularios</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <section id="cards" class="mb-5">
+      <h2 class="mb-3">Sección de Tarjetas</h2>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Card 1</h5>
+              <p class="card-text">Texto de ejemplo para la primera tarjeta.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Card 2</h5>
+              <p class="card-text">Texto de ejemplo para la segunda tarjeta con un poco más de contenido.</p>
+              <a href="#" class="btn btn-secondary">Detalles</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Card 3</h5>
+              <p class="card-text">Una tercera tarjeta para completar la fila.</p>
+              <a href="#" class="btn btn-success">Activar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="row">
+      <div class="col-md-6 mb-5" id="contacto">
+        <h2>Formulario de Contacto</h2>
+        <div class="card p-4 bg-light">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" placeholder="nombre@ejemplo.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mensaje</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar Datos</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-5">
+        <h2>Componentes Interactivos</h2>
+        
+        <div class="accordion mb-3" id="acordeon">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+                Información desplegable
+              </button>
+            </h2>
+            <div id="item1" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                Aquí hay contenido oculto dentro del acordeón.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 border rounded text-center">
+          <p>Haz clic para ver el modal:</p>
+          <button class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#miModal">
+            Abrir Modal
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div> <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container">
+      <p class="mb-0">&copy; 2023 Mi Sitio Web. Todos los derechos reservados.</p>
+      <small>Desarrollado para el Reto Final</small>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Título del Modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¡Has completado el requisito del Modal! Aquí puedes poner cualquier información importante.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
